@@ -26,7 +26,7 @@ export const Chart: React.FC<IPassedProps> = (props) => {
       id={'PercentileCurves'}
       height={chartHeight + 'px'}
       width={chartWidth + 'px'}
-      style={ {border: '1px solid #ddd', marginTop: '3em'} }
+      style={ {border: '1px solid #ddd', marginTop: '1em'} }
     >
       <ChartArea margins={margins}>
         <XAxis

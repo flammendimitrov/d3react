@@ -2,8 +2,13 @@
   text-align: center;
 }
 
-.App-logo {
+.react-logo {
   height: 10vmin;
+  pointer-events: none;
+}
+
+.d3-logo {
+  height: 7.2vmin;
   pointer-events: none;
 }
 
@@ -17,7 +22,7 @@
   background-color: #282c34;
   min-height: 15vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);

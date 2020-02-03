@@ -1,7 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
+import reactLogo from './logo.svg';
+import d3Logo from './d3Logo.svg';
 import './App.css';
 import { Chart } from './Chart/Chart';
+import { RefreshButton } from './Controls/RefreshButton';
 import { IData } from './Chart/types';
 
 const makeRandomArray = (valueCount: number): IData => {
@@ -12,16 +14,19 @@ const makeRandomArray = (valueCount: number): IData => {
   return values;
 };
 
+
 const App = () => {
-  const [data] = React.useState(makeRandomArray(20));
+  const [data, setData] = React.useState(makeRandomArray(20));
 
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={reactLogo} className="react-logo" alt="react" />
+        <img src={d3Logo} className="d3-logo" alt="d3" />
       </header>
       <main>
         <p>Letting React and D3.js play together</p>
+        <RefreshButton onRefresh={() => setData(makeRandomArray(Math.floor(Math.random() * 20 + 1)))} />
         <Chart data={data} />
       </main>
     </div>

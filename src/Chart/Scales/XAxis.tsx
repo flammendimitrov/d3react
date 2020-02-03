@@ -52,7 +52,6 @@ class XAxis extends React.Component<IPassedProps> {
   }
 
   public render() {
-    console.log('GroupRef :: ', this.xAxisGroupRef);
     return (
       <>
         <g ref={this.setGroupRef} className={'x-axis-group'} />

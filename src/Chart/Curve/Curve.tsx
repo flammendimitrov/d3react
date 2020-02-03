@@ -28,8 +28,7 @@ class Curve extends React.Component<IPassedProps> {
 
   private createPercentileCurve = (scales: any, data: IData) => {
     const curveGenerator = this.generateCurve(scales);
-    console.log(this.curve);
-    // TODO: append the generated curve
+    
     this.curve = d3.select(this.groupRef)
       .attr('class', 'curve_group')
       .append('path')
@@ -38,7 +37,6 @@ class Curve extends React.Component<IPassedProps> {
         .attr('stroke-width', '2px')
         .attr('fill', 'none')
         .attr('d', () => curveGenerator(data));
-
   };
 
   private updatePercentileCurve = (curve: any, scales: any, data: IData) => {

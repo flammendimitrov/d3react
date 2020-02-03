@@ -52,7 +52,6 @@ class YAxis extends React.Component<IPassedProps> {
       .attr('class', 'y-axis');
 
     this.yAxis.call(axisType(yScale));
-    console.log('y-axis was created');
   };
 
   /**
@@ -72,8 +71,6 @@ class YAxis extends React.Component<IPassedProps> {
 
     yScale.domain([Math.trunc(minY * 0.8), Math.trunc(maxY * 1.2)]);
     yAxis.call(axisType(yScale));
-
-    console.log('y-axis was updated', data);
   };
 
   public componentDidMount() {
