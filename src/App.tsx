@@ -2,9 +2,18 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Chart } from './Chart/Chart';
+import { IData } from './Chart/types';
+
+const makeRandomArray = (valueCount: number): IData => {
+  const values: IData = [];
+  for (let i =0; i < valueCount; i++) {
+    values.push(Math.floor(Math.random() * 100));
+  }
+  return values;
+};
 
 const App = () => {
-  const [data] = React.useState([79.6, 87.9, 94.6, 100.5, 105.5, 110.5, 115.7, 121, 126.6, 132.5, 138.4, 143.3, 146.7, 148.7, 149.8, 150.3, 150.6, 150.9]);
+  const [data] = React.useState(makeRandomArray(20));
 
   return (
     <div className="App">

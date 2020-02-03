@@ -2,6 +2,7 @@ import * as React from 'react';
 import ChartArea from './ChartArea';
 import XAxis from './Scales/XAxis';
 import YAxis from './Scales/YAxis';
+import Curve from './Curve/Curve';
 import { scaleLinear } from 'd3';
 import { IData, IMargins } from './types';
 
@@ -40,6 +41,11 @@ export const Chart: React.FC<IPassedProps> = (props) => {
           yScale={ yScale }
           margins={ margins }
           chartHeight={ height }
+        />
+
+        <Curve 
+          data={ props.data }
+          scales={{ x: xScale, y: yScale }}
         />
       </ChartArea>
     </svg>
