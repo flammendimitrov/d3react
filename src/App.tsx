@@ -26,7 +26,7 @@ const App = () => {
       </header>
       <main>
         <p>Letting React and D3.js play together</p>
-        <RefreshButton onRefresh={() => setData(makeRandomArray(Math.floor(Math.random() * 20 + 1)))} />
+        <RefreshButton onRefresh={() => setData(makeRandomArray(Math.floor(Math.random() * 20) + 2))} />
         <Chart data={data} />
       </main>
     </div>

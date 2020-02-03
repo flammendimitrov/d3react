@@ -19,7 +19,7 @@ class XAxis extends React.Component<IPassedProps> {
   };
 
   private update = (group: any): void => {
-    this.props.xScale.domain([0, Math.trunc(this.props.data.length * 1.2)]);
+    this.props.xScale.domain([0, Math.trunc(this.props.data.length)]);
 
     const xAxisCall = axisBottom(this.props.xScale);
 
